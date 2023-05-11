@@ -1,0 +1,91 @@
+﻿@model IEnumerable<ProductManagmentCRUD.Models.ProductViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Order Details</h2>
+
+
+<table class="table table-bordered table-hover table-striped" id="product-table">
+    <thead>
+
+    <th>
+        @Html.DisplayNameFor(model => model.Customers.UserName)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.Customers.Email)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.Customers.MobilePhone)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.Orders.OrdersId)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.Orders.OrderDate)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.OrderDetails.Product.ProductName)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.OrderDetails.Product.Category.CategoryName)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.OrderDetails.Quantity)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.OrderDetails.UnitPrice)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.OrderDetails.Discount)
+    </th>
+
+    </tr>
+
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customers.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customers.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customers.MobilePhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Orders.OrdersId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Orders.OrderDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDetails.Product.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDetails.Product.Category.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDetails.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDetails.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDetails.Discount)
+                </td>
+
+
+
+            </tr>
+        }
+
+    </tbody>
+  
+
+</table>
